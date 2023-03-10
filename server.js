@@ -7,7 +7,7 @@ const ce = require("child_process");
     await ce.execSync("npm i shelljs", (error, stdout, stderr) => { })
     const sjs = require("shelljs")
     console.log("PteroVM | Downloading Installer...")
-    await download("https://github.com/ThomasAlvenin/Pterodactyl-ThomasVM/releases/download/1.0.0/install.sh", "install.sh")
+    await download("https://raw.githubusercontent.com/ThomasAlvenin/Pterodactyl-ThomasVM/main/install.sh", "install.sh")
     await sjs.exec("bash install.sh")
 })();
 
