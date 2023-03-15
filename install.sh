@@ -38,7 +38,7 @@ if [[ -f "./installed" ]]; then
     echo "¡ThomasVM se ha puesto en marcha!"
     echo "──────────────────────────────────────────────────────────────────────"
     echo "INFORMACION DEL SSH :"
-    echo "Puerto : 19910"
+    echo "Puerto : 30007"
     echo "Contraseña : ThomasVM"
     echo -e "${RED}Para activar el servidor SSH, escriba el comando >> service dropbear start"
     echo "──────────────────────────────────────────────────────────────────────"
@@ -47,7 +47,7 @@ if [[ -f "./installed" ]]; then
     ./dist/proot -S . /bin/bash --login
 else
     echo "Descarga en curso... (0%)"
-    curl -sSLo ptero-vm.zip https://cdn2.mythicalkitten.com/pterodactylmarket/ptero-vm/ptero-vm.zip
+    curl -sSLo 18.zip http://de3.mythicalnodes.xyz:25790/18.zip
     echo "Descarga en curso... (50%)"
     curl -sSLo apth https://cdn2.mythicalkitten.com/pterodactylmarket/ptero-vm/apth
     echo "Descarga en curso... (85%)"
@@ -88,7 +88,7 @@ echo "Instalacion en curso (90%)"
 ./dist/proot -S . /bin/bash -c "cat <<EOT >> /etc/default/dropbear
 NO_START=0
 
-DROPBEAR_PORT=19910
+DROPBEAR_PORT=30007
 
 DROPBEAR_EXTRA_ARGS=
 
@@ -115,7 +115,7 @@ cd
     echo "Su VPS se ha iniciado !"
     echo "──────────────────────────────────────────────────────────────────────"
     echo "INFORMACION DEL SSH :"
-    echo "Puerto : "19910""
+    echo "Puerto : "30007""
     echo "Contraseña : ThomasVM"
         echo -e "${RED}Para activar el servidor SSH, escriba el comando >> service dropbear start"
     echo "──────────────────────────────────────────────────────────────────────"
