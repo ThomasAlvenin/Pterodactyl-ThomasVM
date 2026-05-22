@@ -1,3 +1,4 @@
+
 #!/bin/bash
 HOME="/home/container"
 HOMEA="$HOME/linux/.apt"
@@ -38,7 +39,7 @@ if [[ -f "./installed" ]]; then
     echo "¡ThomasVM se ha puesto en marcha!"
     echo "──────────────────────────────────────────────────────────────────────"
     echo "INFORMACION DEL SSH :"
-    echo "Puerto : 19910"
+    echo "Puerto : 25735"
     echo "Contraseña : ThomasVM"
     echo -e "${RED}Para activar el servidor SSH, escriba el comando >> service dropbear start"
     echo "──────────────────────────────────────────────────────────────────────"
@@ -88,7 +89,7 @@ echo "Instalacion en curso (90%)"
 ./dist/proot -S . /bin/bash -c "cat <<EOT >> /etc/default/dropbear
 NO_START=0
 
-DROPBEAR_PORT=19910
+DROPBEAR_PORT=25735
 
 DROPBEAR_EXTRA_ARGS=
 
@@ -115,7 +116,7 @@ cd
     echo "Su VPS se ha iniciado !"
     echo "──────────────────────────────────────────────────────────────────────"
     echo "INFORMACION DEL SSH :"
-    echo "Puerto : "19910""
+    echo "Puerto : "25735""
     echo "Contraseña : ThomasVM"
         echo -e "${RED}Para activar el servidor SSH, escriba el comando >> service dropbear start"
     echo "──────────────────────────────────────────────────────────────────────"
@@ -123,3 +124,4 @@ cd
     echo "passwd"
     ./dist/proot -S . /bin/bash --login
 fi
+
